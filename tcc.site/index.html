@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ferramenta para classificação de entidades nomeadas em textos biomédicos</title>
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark border-bottom shadow-sm mb-3 bg-success">
+                <div class="container">
+                    <button
+                        class="navbar-toggler text-white"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <a class="nav-link active text-white" aria-current="page" href="#">Início</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <hr>
+        <main flex-fill>
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col mt-5">
+                        <div class="container_entidades"> 
+                            Classifique as palavras abaixo.
+                            <h1 class="text-black font-monospace" id="label_entidade">Entidade</h1>
+                        </div>
+                        <div class="row row-cols-1 row-cols-md-4">
+                            <button type="button" class="btn btn-primary m-1" id="btn-doenca">Doença</button>
+                            <button type="button" class="btn btn-primary m-1" id="btn-sintoma">Sintoma</button>
+                            <button type="button" class="btn btn-primary m-1" id="btn-medicamento">Medicamento</button>
+                            <button type="button" class="btn btn-primary m-1" id="btn-pessoa">Pessoa</button>
+                            <button type="button" class="btn btn-primary m-1" id="btn-principio">Princípio Ativo</button>
+                            <button type="button" class="btn btn-primary m-1" id="btn-outro">Outros</button>
+                        </div>
+                    </div>
+                    <div class="col mt-5">
+                        <div class="container row" id="controller">
+                            <h3>Controladores</h3> 
+                            <button type="button" class="btn btn-primary m-1 mb-3" id="btn-reset">Resetar Banco de Dados</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-5">
+                <h3>Entidades Mapeadas</h3>
+                <hr class="mt-2">
+                <div class="container-entidadesNomeadas">
+
+                </div>
+            </div>
+        </main>
+        <script src="/js/main.js" type="module"></script>
+        <script src="/js/api.js" type="module"></script>
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
